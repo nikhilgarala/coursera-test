@@ -1,1 +1,31 @@
+<!doctype html>
+<html ng-app="Myassi">
+  <head>
+    <title>Lunch Checker</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body ng-controller="Myassicontrol">
+   <div class="container">
+     <h1>My First Assiment</h1>
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="comma separated" ng-model="sep" 
+             class="form-control">
+             <!-- {{sep}} -->
+         </div>
+         <div class="form-group">
+             <button ng-click="counthe()" class="btn btn-default">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <div class="alert alert-success">{{Message}}</div>
+         </div>
+   </div>
 
+</body>
+</html>
