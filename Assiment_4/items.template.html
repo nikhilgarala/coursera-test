@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Our Restaturant</title>
+</head>
+<body>
+    <!-- <h2>Category List</h2> -->
+    <ui-view class="ng-scope">
+        <a ui-sref="Home" class="ng-scope" href="#/">Menu</a>
+        <span class="ng-scope">-></span>
+        <a ui-sref="categoryList" class="ng-scope" href="#/category-list">Category</a>
+        <span class="ng-scope"><-</span>
+        <a ui-sref="/" class="ng-scope" href="/">Home</a>
+
+        <items items="itemsCtrl.items.menu_items" class="ng-scope ng-isolate-scope"></items>
+
+        <ul>
+            <li ng-repeat="item in $ctrl.items" class="ng-binding ng-scope">
+                {{item}}
+            </li>
+        </ul>
+    </ui-view>
+</body>
+</html>
