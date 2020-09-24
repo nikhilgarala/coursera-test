@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,11 +13,13 @@
         <span class="ng-scope"><-</span>
         <a ui-sref="/" class="ng-scope" href="/">Home</a>
 
-        <items items="itemsCtrl.items.menu_items" class="ng-scope ng-isolate-scope"></items>
+        <items items="itemsCtrl.items.menu_items"></items>
+
 
         <ul>
-            <li ng-repeat="item in $ctrl.items" class="ng-binding ng-scope">
+            <li ng-repeat="item in $ctrl.items">
                 {{item}}
+                
             </li>
         </ul>
     </ui-view>
